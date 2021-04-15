@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
+    "start": "node server/build/index.js",
     "build": "tsc -w",
     "dev": "nodemon server/build/index.js"
   },

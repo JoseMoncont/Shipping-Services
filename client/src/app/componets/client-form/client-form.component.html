@@ -26,7 +26,7 @@
         <h3>{{cliente.nombre == '' ? 'Nombre': cliente.nombre}} </h3>
         <p>{{cliente.apellido == '' ? 'Apellido': cliente.apellido}} </p>
         <p>{{cliente.direccion == '' ? 'Direccion': cliente.direccion}} </p>
-        <p>{{cliente.cpostal == '' ? 'Codigo Postal': cliente.cpostal}} </p>
+        <p>{{cliente.cpostal == 0 ? 'Codigo Postal': cliente.cpostal}} </p>
         <p>{{cliente.created_at | date: 'yyyy-MM-dd'}} </p>
   
     </div>

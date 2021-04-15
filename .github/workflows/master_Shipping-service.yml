@@ -52,5 +52,5 @@ jobs:
       with:
         app-name: 'Shipping-service'
         slot-name: 'production'
-        publish-profile: ${{ secrets.AzureAppService_PublishProfile_6c677e2eeb7e4ac0acb3c3c023f02f4d }}
+        publish-profile: ${{ secrets.AzureAppService_PublishProfile_110b5492c4644768a95eee65e57d2123 }}
         package: .

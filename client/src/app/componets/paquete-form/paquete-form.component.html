@@ -1,0 +1,25 @@
+<div class="col-md-4 offset-md-4">
+  <div class="card">
+      <div class="card-body">
+          <form>
+              <div class="form-group">
+                  <input type="text" [(ngModel)]="paquete.nombre" name="nombre"  placeholder="Paquete" class="form.control  w-100" autofocus>
+              </div>
+              <div class="form-group">
+                  <input type="number" [(ngModel)]="paquete.precio" name="precio"  placeholder="Precio $" class="form.control  w-100" >
+              </div>
+
+              <button class="btn btn-success btn-block" (click)=" edit ? updatePaquete(): saveNewPaquete()">Guardar</button>
+          </form>
+      </div>
+  </div>
+</div>
+
+<div class="col-md-4">
+  <div class="card card-body text-center">
+      <h3>{{paquete.nombre == '' ? 'Nombre Paquete': paquete.nombre}} </h3>
+      <p>{{paquete.precio == 0 ? 'Precio': paquete.precio}} </p>
+      <p>{{paquete.created_at | date: 'yyyy-MM-dd'}} </p>
+
+  </div>
+</div>

@@ -1,0 +1,29 @@
+<div class="col-md-9 mb-4">
+    <h2 class="d-inline mr-2 ">Clientes</h2>
+    <a class="d-inline btn btn-dark " routerLink="/clientes/add" role="button">Agregar Cliente | <em class="fas fa-plus-circle"></em></a>
+</div>
+
+<div class="col-md-4" *ngFor="let cliente of clientes">
+    <div class="card text-center">
+        <div class="card-header bg-primary text-white d-flex justify-content-between aling-items-center">
+            {{cliente.nombre}}{{cliente.apellido}}
+            <button class="btn btn-danger" (click)="deleteCliente(cliente.id)">
+                Eliminar
+            </button>
+        </div>
+        
+        <div class="card-body">
+            <p>{{cliente.direccion}}</p>
+            <p>{{cliente.cpostal}} </p>
+            <p> <span class="badge badge-primary">{{cliente.status}}</span> </p>
+            
+            <a [routerLink]="['/clientes/edit', cliente.id]" class="btn btn-info btn-block">
+                EDITAR CLIENTE
+            </a>
+
+        </div>
+
+    </div>
+
+
+</div>

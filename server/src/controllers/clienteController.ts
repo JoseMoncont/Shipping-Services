@@ -14,12 +14,12 @@ class ClienteController {
         if (clientes.length > 0){
             return res.json(clientes[0]);
         }
-        res.status(404).json({text: "El Cliente no existe"});
+        res.status(404).json({text: "El Ciente no existe"});
     }
     
     public async create (req: Request, res: Response): Promise<void>{
-        await db.query('INSERT INTO clietne set ?',[req.body])
-        res.json({message: 'Cliente Guardado'});
+        await db.query('INSERT INTO cliente set ?',[req.body])
+        res.json({message: 'Cliente guardado'});
     }
     public async update (req: Request, res: Response){
         const {id} = req.params;

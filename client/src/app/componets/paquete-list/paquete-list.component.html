@@ -1,0 +1,29 @@
+<div class="col-md-9 mb-4">
+    <h2 class="d-inline mr-2 ">Paquetes</h2>
+    <a class="d-inline btn btn-dark " routerLink="/paquetes/add" role="button">Agregar Paquete | <em class="fas fa-plus-circle"></em></a>
+</div>
+
+<div class="col-md-4" *ngFor="let paquete of paquetes">
+    <div class="card text-center">
+        <div class="card-header bg-primary text-white d-flex justify-content-between aling-items-center">
+            {{paquete.nombre}}
+            <button class="btn btn-danger" (click)="deletePaquete(paquete.id)">
+                Eliminar
+            </button>
+        </div>
+        
+        <div class="card-body">
+            <p>{{paquete.nombre}}</p>
+            
+            <p> <span class="badge badge-primary">{{paquete.precio}}</span> </p>
+            
+            <a [routerLink]="['/paquetes/edit', paquete.id]" class="btn btn-info btn-block">
+                EDITAR PAQUETE
+            </a>
+
+        </div>
+
+    </div>
+
+
+</div>
